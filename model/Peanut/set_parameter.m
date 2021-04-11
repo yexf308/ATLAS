@@ -16,6 +16,9 @@
         modify                 = 0; % 0 use the intercept(t=0) 1 use the tau_min point as the landmark
         LowerBound = 0.05;       %  Lowerbound of the training window
         UpperBound = 0.10;       %  Upperbound of the training window
+        relearn_option     = 0;
+
+        
         
         %parameter for simuation
         Nstep      = 5*10^6;    

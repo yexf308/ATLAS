@@ -11,7 +11,7 @@ addpath_settings;
 prompt = '1-Learning ATLAS, 2-Simulating MRT';
 x = input(prompt);
 
-if x==1
+if x==1 
 
     for k =1:10
     %% Set up the parameter
