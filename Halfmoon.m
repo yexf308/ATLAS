@@ -15,7 +15,7 @@ if x==1
     for k =1:10
     %% Set up the parameter
         rng(k)
-        params = set_parameter;
+        params = set_parameter();
         disp('Parameter is set')
 
         params.paths.chart       = [params.paths.datapath,'chart',num2str(k),'.mat'];
@@ -56,7 +56,7 @@ if x==1
 
 elseif x==2
 
-    params = set_parameter;
+    params = set_parameter();
     disp('Parameter is set')
     diary_FPT_fileName                     = [params.paths.datapath,'diary_FPT.txt'];
     diary(diary_FPT_fileName)

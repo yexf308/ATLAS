@@ -18,7 +18,7 @@ if x==1
     %% Set up the parameter
 
     rng(k)
-    params = set_parameter;
+    params = set_parameter();
     disp('Parameter is set')
 
 
@@ -55,7 +55,7 @@ if x==1
 
 elseif x==2
 
-    params = set_parameter;
+    params = set_parameter();
     disp('Parameter is set')
     diary_FPT_fileName                     = [params.paths.datapath,'diary_FPT.txt'];
 
