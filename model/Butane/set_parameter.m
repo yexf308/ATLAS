@@ -113,11 +113,12 @@ chart_sim_parameter      = struct (                                             
  N_IC                  = 30000;
 
  %file path
-chart_fileName                = [datapath,'chart.mat'];
-chart_part_fileName           = [datapath,'chart_part.mat'];
-chart_plot_fileName           = [datapath,'chart_plot.mat'];
-TranM_fileName                = [datapath,'TranM.mat'];
-TranM_plot_fileName           = [datapath,'TranM_plot.mat'];
-chart_relearn_fileName        = [datapath,'chart_relearn.mat'];
-well_fileName                 = [datapath,'well.mat'];
-FPT_fileName                  = [datapath,'Butane_FPT.mat'];
+  butane_paths           = build_butane_paths(datapath);
+  chart_fileName         = butane_paths.chart;
+  chart_part_fileName    = butane_paths.chart_part;
+  chart_plot_fileName    = butane_paths.chart_plot;
+  TranM_fileName         = butane_paths.TranM;
+  TranM_plot_fileName    = butane_paths.TranM_plot;
+  chart_relearn_fileName = butane_paths.chart_relearn;
+  well_fileName          = butane_paths.well;
+  FPT_fileName           = butane_paths.FPT;

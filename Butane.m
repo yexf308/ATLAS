@@ -21,10 +21,11 @@ if x==1
         disp('Parameter is set') 
 
         %set path 
-        chart_fileName                     = [datapath,'chart',num2str(k),'.mat'];
-        chart_part_fileName                = [datapath,'chart_part',num2str(k),'.mat'];
-        TranM_fileName                     = [datapath,'TranM',num2str(k),'.mat'];
-        diary_fileName                     = [datapath,'diary',num2str(k),'.txt'];
+        butane_paths                       = build_butane_paths(datapath, k);
+        chart_fileName                     = butane_paths.chart;
+        chart_part_fileName                = butane_paths.chart_part;
+        TranM_fileName                     = butane_paths.TranM;
+        diary_fileName                     = butane_paths.diary;
         diary(diary_fileName)
 
         tstart=tic; 
@@ -63,8 +64,9 @@ elseif x==2
 
     set_parameter;
     disp('Parameter is set') 
-    diary_FPT_fileName                     = [datapath,'diary_FPT.txt'];
-    Butane_analysis_fileName               = [datapath,'Butane_analysis.mat'];
+    butane_paths                           = build_butane_paths(datapath);
+    diary_FPT_fileName                     = butane_paths.diary_FPT;
+    Butane_analysis_fileName               = butane_paths.Butane_analysis;
     diary(diary_FPT_fileName)
 
      
