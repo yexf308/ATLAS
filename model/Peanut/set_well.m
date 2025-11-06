@@ -1,7 +1,7 @@
 
 % store chart_angle
 K = length(chart);
-chart_angle       = zeros(d, K);
+chart_angle       = zeros(params.RHS.d, K);
 for i = 1:K
              X_int                 = chart{i}.X_int';
              theta_X_int           = atan2( sqrt( X_int(1)^2 + X_int(2)^2 ), X_int(3) );
@@ -70,10 +70,10 @@ well2 = find(V(:,2)< -0.050); %define red  state
 
  index1                = find(ismember(nearest_store, well1));
  L_IC                  = length(index1);
- index1                = index1(round(linspace(1, L_IC, N_IC)));
+ index1                = index1(round(linspace(1, L_IC, params.MFPT.N_IC)));
  index2                = find(ismember(nearest_store, well2));
  L_IC                  = length(index2);
- index2                = index2(round(linspace(1, L_IC, N_IC)));
+ index2                = index2(round(linspace(1, L_IC, params.MFPT.N_IC)));
  X_int_store1          = X(index1,:);
  nearest_store1        = nearest_store(index1);
  X_int_store2          = X(index2,:);
@@ -84,7 +84,7 @@ well_threshold1 =find(V(:,2)>  0.020);
 well_threshold2 =find(V(:,2)< -0.020);
 
 
-chart_angle       = zeros(d, K);
+chart_angle       = zeros(params.RHS.d, K);
 for i = 1:K
              X_int                 = chart{i}.X_int';
              theta_X_int           = atan2( sqrt( X_int(1)^2 + X_int(2)^2 ), X_int(3) );

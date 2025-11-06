@@ -5,6 +5,7 @@ The paper contains results for three example problems based on Pinched sphere(ni
 
 In each example, there are two steps. The first is the ATLAS learning stage and the second is the mean resident time simulating stage.
 
+
 ## Python implementation
 
 The repository now contains a pure Python port of the MATLAB ATLAS reference implementation under the [`pyatlas`](pyatlas/) package. The translation mirrors the original workflow while relying on NumPy and SciPy-ready data structures and simulators:
@@ -26,3 +27,4 @@ print(f"Learned {len(state.charts)} charts")
 ```
 
 All components are NumPy-based and can be combined with SciPy tooling for further analysis or downstream tasks.
+

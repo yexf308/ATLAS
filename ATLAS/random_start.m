@@ -5,8 +5,8 @@
     [N_min, index_min]                       = min(bins_hist);
     minimum_block                            = find(bins==bins_unique(index_min));
     nearest                                  = minimum_block(ceil(rand * N_min));
-    chart_sim_parameter.nearest              = nearest;
-    chart_sim_parameter.connectivity         = connectivity;
-    chart_sim_parameter.X_int                = chart{nearest}.X_int;
+    params.chart_sim_parameter.nearest              = nearest;
+    params.chart_sim_parameter.connectivity         = connectivity;
+    params.chart_sim_parameter.X_int                = chart{nearest}.X_int;
     
     
